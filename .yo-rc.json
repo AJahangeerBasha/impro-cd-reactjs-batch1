@@ -1,0 +1,9 @@
+{
+  "generator-react-webpack": {
+    "appName": "impro-cd-reactjs-batch1",
+    "style": "css",
+    "cssmodules": true,
+    "postcss": false,
+    "generatedWithVersion": 4
+  }
+}
