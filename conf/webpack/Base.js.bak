@@ -110,10 +110,6 @@ class WebpackBaseConfig {
             test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2)$/,
             loader: 'file-loader'
           },
-          { 
-            test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
-            loader: 'url-loader?limit=100000'
-          },
           {
             test: /^.((?!cssmodule).)*\.(sass|scss)$/,
             loaders: [
