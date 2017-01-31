@@ -3,16 +3,19 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './components/App';
+import Login from './components/login';
 import Home from './components/home';
 import About from './components/about';
+
 
 ReactDOM.render(
   <AppContainer>
     <Router history={browserHistory}>
       <Route path="/" component={App}>
-          <IndexRoute component={Home} />
+          <IndexRoute component={Login} />
+		  <Route path="login" component={Login}/>
           <Route path="home" component={Home}/>
-          <Route path="about" component={About}/>
+          <Route path="about" component={About}/>		  
       </Route>
     </Router>
   </AppContainer>,
