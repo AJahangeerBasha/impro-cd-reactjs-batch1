@@ -5,7 +5,7 @@ class Home extends React.Component {
     return (
       <div className="index">
         <div className="notice">
-          <h1>this is the home page</h1>z
+          <h1>this is the home page</h1>
         </div>
       </div>
     );

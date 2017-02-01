@@ -1,7 +1,10 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 class Login extends React.Component {
+	handleSubmit (values) {debugger 
+		browserHistory.push('/home');
+	}
   render() {
     return (
       <div className="container">
@@ -11,7 +14,7 @@ class Login extends React.Component {
 		  <div className="account-wall">
            
 		  <form className="form-signin" action="#" onSubmit={(e) => this.handleSubmit(e)}>
-               <input type="text" className ="form-control" placeholder="Email" required  ref={node => { this.login = node }} /><br/>
+               <input type="text" className ="form-control" placeholder="Email" required  ref={node => { this.username = node }} /><br/>
                <input type="password" className ="form-control" placeholder="Password" required  ref={node => { this.password = node }} /><br/>
                <input type="submit" className="btn btn-lg btn-primary btn-block" value="Login" />
           </form>
