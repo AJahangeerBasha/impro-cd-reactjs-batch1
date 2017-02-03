@@ -73,6 +73,12 @@
     display: block;
     margin-top: 10px;
 }
- #draggablePanelList .panel-heading {
+ #draggablePanelTodoList .panel-heading {
+        cursor: move;
+    }
+#draggablePanelInProgressList .panel-heading {
+        cursor: move;
+    }
+#draggablePanelDoneList .panel-heading {
         cursor: move;
     }
