@@ -82,3 +82,9 @@
 #draggablePanelDoneList .panel-heading {
         cursor: move;
     }
+
+.vertical-gap{
+    height: 20px;
+    width: 100%;
+    float: left;
+}
