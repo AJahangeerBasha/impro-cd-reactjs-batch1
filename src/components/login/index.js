@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 class Login extends React.Component {
-	handleSubmit (values) {debugger 
+	handleSubmit (values) { 
 		browserHistory.push('/home');
 	}
   render() {
@@ -14,9 +14,16 @@ class Login extends React.Component {
 		  <div className="account-wall">
            
 		  <form className="form-signin" action="#" onSubmit={(e) => this.handleSubmit(e)}>
-               <input type="text" className ="form-control" placeholder="Email" required  ref={node => { this.username = node }} /><br/>
-               <input type="password" className ="form-control" placeholder="Password" required  ref={node => { this.password = node }} /><br/>
+               <div className="username credential">
+               <input type="text" className ="form-control" placeholder="Email" required  ref={node => { this.username = node }} />
+               <div className="fa fa-user" aria-hidden="true"></div>
+               </div>
+                <div className="password credential">
+               <input type="password" className ="form-control" placeholder="Password" required  ref={node => { this.password = node }} />
+               <div className="fa fa-eye"></div>
+               </div>
                <input type="submit" className="btn btn-lg btn-primary btn-block" value="Login" />
+                <div className="forgetPwd"> Forget Password ? <a href="#">  Click here  to reset </a></div>
           </form>
         </div>
 		</div>
