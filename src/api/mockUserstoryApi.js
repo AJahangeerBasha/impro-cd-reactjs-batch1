@@ -62,7 +62,6 @@ class UserstoryApi {
                 if (userstory.title.length < minUserstoryTitleLength) {
                     reject(`Title must be at least ${minUserstoryTitleLength} characters.`);
                 }
-
                 if (userstory.id) {
                     const existingUserstoryIndex = userstories.findIndex(a => a.id == userstory.id);
                     userstories.splice(existingUserstoryIndex, 1, userstory);

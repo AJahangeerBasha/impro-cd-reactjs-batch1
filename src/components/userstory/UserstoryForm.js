@@ -1,5 +1,6 @@
 import React from 'react';
 import TextInput from '../common/TextInput';
+import Textarea from '../common/Textarea';
 import SelectInput from '../common/SelectInput';
 
 const UserstoryForm = ({userstory, onSave, onDelete, onChange, saving, errors, deleteMode}) => {
@@ -13,9 +14,10 @@ const UserstoryForm = ({userstory, onSave, onDelete, onChange, saving, errors, d
           value={ userstory.title }
           onChange={ onChange }
           error={ errors.title } />
-        <label> Description</label>
-        <textarea
+
+        <Textarea
           name="description"
+          label="Description"
           className="descriptionTextArea"
           value={ userstory.description }
           onChange={ onChange }
@@ -37,13 +39,13 @@ const UserstoryForm = ({userstory, onSave, onDelete, onChange, saving, errors, d
           onClick={ onDelete } />
       </div>
     </form>
-      );
+  );
 };
 
 UserstoryForm.propTypes = {
-        // userstory: React.PropTypes.object.isRequired,
-        // allAuthors: React.PropTypes.array,
-        onSave: React.PropTypes.func.isRequired,
+  // userstory: React.PropTypes.object.isRequired,
+  // allAuthors: React.PropTypes.array,
+  onSave: React.PropTypes.func.isRequired,
   onDelete: React.PropTypes.func.isRequired,
   onChange: React.PropTypes.func.isRequired,
   saving: React.PropTypes.bool,
